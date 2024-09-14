@@ -15,7 +15,10 @@ h1 {
     color: #333;
     margin-bottom: 10px;
 }
-
+h3 {
+    color: #ec7f7f;
+    margin-bottom: 30px;
+}
 h2 {
     color: #666;
     margin-bottom: 30px;

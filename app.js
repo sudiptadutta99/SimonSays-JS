@@ -10,13 +10,29 @@ let btns = ["yellow", "red", "green", "purple"];
 let h2 = document.querySelector("h2");
 let highScoreDisplay = document.getElementById("highScore");
 
-document.addEventListener("keypress", function() {
-    if (started == false) {
-        console.log("game started");
-        started = true; 
-        levelUp();
+// Add event listeners for keypress, click, and touchstart to start the game
+document.addEventListener("keypress", startGame);
+document.addEventListener("click", function(event) {
+    // Only start game if the clicked element is NOT a game button
+    if (!event.target.classList.contains("btn")) {
+        startGame();
     }
 });
+document.addEventListener("touchstart", function(event) {
+    // Only start game if the touched element is NOT a game button
+    if (!event.target.classList.contains("btn")) {
+        startGame();
+    }
+});
+
+function startGame() {
+    if (!started) {
+        console.log("game started");
+        started = true; 
+        // 1 second delay before starting the level
+        setTimeout(levelUp, 450);
+    }
+}
 
 function gameFlash(btn) {
     btn.classList.add("flash");
@@ -52,7 +68,7 @@ function checkAns(idx) {
             setTimeout(levelUp, 1000);
         }
     } else {
-        h2.innerHTML = `Game Over! Your score was <b>${level}</b> <br> Press any key to start.`;
+        h2.innerHTML = `Game Over! Your score was <b>${level}</b> <br> Click or touch anywhere to start the game.`;
         document.querySelector("body").style.backgroundColor = "red";
         setTimeout(function() {
             document.querySelector("body").style.backgroundColor = "white";

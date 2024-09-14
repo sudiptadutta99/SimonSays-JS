@@ -40,14 +40,15 @@ Here is a preview of the SimonSays-JS:
 
 ## How to Play
 
-1. Press any key to start the game.
-2. Watch and listen as the game highlights a button.
-3. Click the button that was highlighted.
+1. Click or touch anywhere on the screen to start the game.
+2. Watch as the game highlights a button.
+3. Click or touch the button that was highlighted.
 4. The game will add another step to the sequence.
-5. Repeat the sequence by clicking the buttons in the correct order.
+5. Repeat the sequence by clicking or touching the buttons in the correct order.
 6. If you make a mistake, the game will end.
 7. Your score is based on the number of rounds you successfully complete.
 8. Try to beat your highest score!
+9. After the game ends, click or touch anywhere to start a new game.
 
 ## Contributing
 

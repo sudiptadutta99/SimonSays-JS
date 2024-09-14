@@ -1,0 +1,105 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 460px;
+}
+
+.btn {
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    border: 10px solid #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.red {
+    background-color: #FF4136;
+}
+
+.yellow {
+    background-color: #FFDC00;
+}
+
+.green {
+    background-color: #2ECC40;
+}
+
+.purple {
+    background-color: #B10DC9;
+}
+
+.flash {
+    background-color: white;
+}
+
+.userflash {
+    background-color: #7FDBFF;
+}
+#highScoreContainer {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#highScore {
+    font-weight: bold;
+    color: #2ECC40;
+}
+
+@media (max-width: 500px) {
+    .btn-container {
+        gap: 15px;
+    }
+    .btn {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn-container {
+        gap: 10px;
+    }
+    .btn {
+        height: 120px;
+        width: 120px;
+    }
+}
+
